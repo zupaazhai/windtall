@@ -61,7 +61,6 @@ class Button extends WindtallComponent
         }
 
         return array_key_exists($currentVarient, $varients) ? $varients[$currentVarient] : $varients['primary'];
-
     }
 
     /**
