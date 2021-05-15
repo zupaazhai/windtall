@@ -4,6 +4,7 @@ namespace Zupaazhai\Windtall;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
+
 // use Zupaazhai\Windtall\Commands\WindtallCommand;
 
 class WindtallServiceProvider extends PackageServiceProvider
@@ -19,7 +20,7 @@ class WindtallServiceProvider extends PackageServiceProvider
             ->name('windtall')
             ->hasConfigFile()
             ->hasViews();
-            // ->hasMigration('create_windtall_table')
+        // ->hasMigration('create_windtall_table')
             // ->hasCommand(WindtallCommand::class);
     }
 }
