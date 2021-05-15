@@ -1,17 +1,17 @@
 {
-    "name": "vendor_slug/package_slug",
-    "description": ":package_description",
+    "name": "zupaazhai/windtall",
+    "description": "This is my package Windtall",
     "keywords": [
-        ":vendor_name",
+        "zupaazhai",
         "laravel",
-        "package_slug"
+        "windtall"
     ],
-    "homepage": "https://github.com/vendor_slug/package_slug",
+    "homepage": "https://github.com/zupaazhai/windtall",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Supachai Wongmoon",
+            "email": "supachai@outlook.com",
             "role": "Developer"
         }
     ],
@@ -30,13 +30,13 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories"
+            "Zupaazhai\\Windtall\\": "src",
+            "Zupaazhai\\Windtall\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "Zupaazhai\\Windtall\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -50,10 +50,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "Zupaazhai\\Windtall\\WindtallServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\SkeletonFacade"
+                "Windtall": "Zupaazhai\\Windtall\\WindtallFacade"
             }
         }
     },

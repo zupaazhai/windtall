@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Zupaazhai\Windtall\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class WindtallCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'windtall';
 
     public $description = 'My command';
 
