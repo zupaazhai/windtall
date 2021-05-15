@@ -3,7 +3,6 @@
 namespace Zupaazhai\Windtall\Components;
 
 use Illuminate\View\View;
-use Zupaazhai\Windtall\Components\WindtallComponent;
 
 class Button extends WindtallComponent
 {
