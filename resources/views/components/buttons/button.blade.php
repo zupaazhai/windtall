@@ -1,6 +1,7 @@
 @php
-    $defaultClass = 'font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple';
+    $defaultClass = 'font-medium leading-5 transition-colors duration-150 rounded-lg border border-transparent disabled:opacity-50';
+    $disabledCursor = !empty($attributes['disabled']) ? 'cursor-not-allowed' : '';
 
-    $class = implode(' ', [$getSize(), $defaultClass]);
+    $class = implode(' ', [$getVarient(), $getSize(), $defaultClass, $disabledCursor]);
 @endphp
 <{{ $tag }} {{ $attributes->merge(['class' => $class]) }} class="px-3 py-2 bg-purple-500 text-white">{{ $slot ?? '' }}</{{ $tag }}>
