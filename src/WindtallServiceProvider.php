@@ -4,6 +4,7 @@ namespace Zupaazhai\Windtall;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\View\Compilers\BladeCompiler;
+
 class WindtallServiceProvider extends ServiceProvider
 {
     public function register(): void
@@ -40,7 +41,6 @@ class WindtallServiceProvider extends ServiceProvider
     private function bootBladeComponents(): void
     {
         $this->callAfterResolving(BladeCompiler::class, function (BladeCompiler $blade) {
-
             $prefix = config('windtall.prefix', '');
 
             foreach (config('windtall.components', []) as $alias => $component) {
