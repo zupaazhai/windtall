@@ -6,6 +6,6 @@ return [
     'prefix' => 'wt',
 
     'components' => [
-        'button' => Components\Buttons\Button::class
+        'button' => Components\Button::class
     ]
 ];

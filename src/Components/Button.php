@@ -1,6 +1,6 @@
 <?php
 
-namespace Zupaazhai\Windtall\Components\Buttons;
+namespace Zupaazhai\Windtall\Components;
 
 use Illuminate\View\View;
 use Zupaazhai\Windtall\Components\WindtallComponent;
@@ -34,7 +34,7 @@ class Button extends WindtallComponent
      */
     public function render(): View
     {
-        return view('windtall::components.buttons.button');
+        return view('windtall::components.button');
     }
 
     /**
