@@ -75,7 +75,7 @@ class Button extends WindtallComponent
             'larger' => 'px-10 py-4',
             'large' => 'px-5 py-3',
             'regular' => 'px-4 py-2',
-            'small' => 'px-3 py-1'
+            'small' => 'px-3 py-1',
         ];
 
         return array_key_exists($this->size, $sizeClass) ? $sizeClass[$this->size] : $sizeClass['regular'];
