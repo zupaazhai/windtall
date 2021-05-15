@@ -16,6 +16,15 @@ return [
         ],
         'success' => [
             'color' => 'green'
+        ],
+        'neutral' => [
+            'color' => 'gray'
+        ],
+        'danger' => [
+            'color' => 'red'
+        ],
+        'warning' => [
+            'color' => 'yellow'
         ]
     ]
 ];
