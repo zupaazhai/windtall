@@ -21,6 +21,7 @@ class WindtallServiceProvider extends ServiceProvider
     {
         $this->bootResources();
         $this->bootBladeComponents();
+        $this->bootPublishing();
     }
 
     /**
@@ -47,5 +48,23 @@ class WindtallServiceProvider extends ServiceProvider
                 $blade->component($component, $alias, $prefix);
             }
         });
+    }
+
+    /**
+     * Boot published
+     *
+     * @return void
+     */
+    private function bootPublishing(): void
+    {
+        if ($this->app->runningInConsole()) {
+            $this->publishes([
+                __DIR__.'/../config/windtall.php' => $this->app->configPath('windtall.php'),
+            ], 'windtall-config');
+
+            $this->publishes([
+                __DIR__.'/../resources/views' => $this->app->resourcePath('views/vendor/windtall'),
+            ], 'windtall-views');
+        }
     }
 }
