@@ -6,6 +6,7 @@ return [
     'prefix' => 'wt',
 
     'components' => [
+        'alert' => Components\Alert::class,
         'button' => Components\Button::class,
         'badge' => Components\Badge::class
     ],
