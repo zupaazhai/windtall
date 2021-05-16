@@ -14,7 +14,7 @@ class AlertTest extends ComponentTestCase
     }
 
     /** @test */
-    public function specify_primary_varient()
+    public function specify_varient()
     {
         // Primary
         $this->assertComponentRenders(
