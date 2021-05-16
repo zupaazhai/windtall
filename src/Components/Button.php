@@ -3,9 +3,12 @@
 namespace Zupaazhai\Windtall\Components;
 
 use Illuminate\View\View;
+use Zupaazhai\Windtall\Traits\Varient;
 
 class Button extends WindtallComponent
 {
+    use Varient;
+
     public $tag;
 
     public $size;
@@ -43,13 +46,8 @@ class Button extends WindtallComponent
      */
     public function getVarient(): string
     {
-        $currentVarient = $this->varient;
-
-        $varients = [
-            'primary' => 'bg-purple-600 active:bg-purple-600 hover:bg-purple-700 focus:shadow-outline-purple text-white',
-            'primary_outline' => 'border border-purple-600 text-purple-600 hover:border-purple-800',
-            'primary_link' => 'text-purple-600 hover:bg-purple-300',
-        ];
+        $currentVarient = in_array($this->varient, $this->getVarients()) ? $this->varient : 'primary';
+        $varients = $this->getStyleOfVarient($currentVarient);
 
         if ($this->layout == 'outline') {
             $currentVarient = $currentVarient . '_outline';
@@ -59,7 +57,25 @@ class Button extends WindtallComponent
             $currentVarient = $currentVarient . '_link';
         }
 
-        return array_key_exists($currentVarient, $varients) ? $varients[$currentVarient] : $varients['primary'];
+        return $varients[$currentVarient];
+    }
+
+    /**
+     * Get style of varient
+     *
+     * @param string $varient
+     *
+     * @return array
+     */
+    public function getStyleOfVarient(string $varient): array
+    {
+        $color = $this->getVarientConfig($varient . '.color');
+
+        return [
+            "{$varient}" => "bg-{$color}-600 active:bg-{$color}-600 hover:bg-{$color}-700 focus:shadow-outline-{$color} text-white",
+            "{$varient}_outline" => "border border-{$color}-600 text-{$color}-600 hover:border-{$color}-800",
+            "{$varient}_link" => "text-{$color}-600 hover:bg-{$color}-300",
+        ];
     }
 
     /**
