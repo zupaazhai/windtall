@@ -3,7 +3,6 @@
 namespace Zupaazhai\Windtall\Components;
 
 use Illuminate\View\View;
-use Zupaazhai\Windtall\Components\WindtallComponent;
 
 class Avatar extends WindtallComponent
 {
@@ -38,9 +37,10 @@ class Avatar extends WindtallComponent
 
         if (strpos($this->size, 'x') !== false) {
             list($width, $height) = explode('x', $this->size);
-            return implode(' ' , [
+
+            return implode(' ', [
                 empty($width) ? '' : 'w-' . $width,
-                empty($height) ? '' : ' h-' . $height
+                empty($height) ? '' : ' h-' . $height,
             ]);
         }
 
