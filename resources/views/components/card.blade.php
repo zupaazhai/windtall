@@ -1,6 +1,9 @@
 @php
+    $defaultClass = 'min-w-0 p-4 rounded-lg shadow-sm border border-gray-100';
+    $class = implode(' ', [$defaultClass, $getBgVarient()]);
+
 @endphp
-<div class="min-w-0 p-4 {{ $getBgVarient() }} rounded-lg shadow-sm border border-gray-100">
+<div {{ $attributes->merge(['class' => $class]) }}>
     @if (!empty($title) || !empty($header))
     <div class="card-header mb-4">
         @if (empty($header))

@@ -8,7 +8,7 @@ class CardTest extends ComponentTestCase
     public function the_component_can_be_rendered()
     {
         $expected = <<<'HTML'
-        <div class="min-w-0 p-4 bg-white rounded-lg shadow-sm border border-gray-100">
+        <div class="min-w-0 p-4 rounded-lg shadow-sm border border-gray-100 bg-white">
             <div class="card-body text-gray-600"></div>
         </div>
         HTML;
@@ -23,7 +23,7 @@ class CardTest extends ComponentTestCase
     public function the_component_with_slot()
     {
         $expected = <<<'HTML'
-        <div class="min-w-0 p-4 bg-white rounded-lg shadow-sm border border-gray-100">
+        <div class="min-w-0 p-4 rounded-lg shadow-sm border border-gray-100 bg-white">
             <div class="card-body text-gray-600">Content place here</div>
         </div>
         HTML;
@@ -38,7 +38,7 @@ class CardTest extends ComponentTestCase
     public function the_component_with_title_attribute()
     {
         $expected = <<<'HTML'
-        <div class="min-w-0 p-4 bg-white rounded-lg shadow-sm border border-gray-100">
+        <div class="min-w-0 p-4 rounded-lg shadow-sm border border-gray-100 bg-white">
             <div class="card-header mb-4">
                 <h4 class="font-semibold text-gray-600">
                     Card title
@@ -55,10 +55,30 @@ class CardTest extends ComponentTestCase
     }
 
     /** @test */
+    public function the_component_with_extra_attribute()
+    {
+        $expected = <<<'HTML'
+        <div class="min-w-0 p-4 rounded-lg shadow-sm border border-gray-100 bg-white" id="my-card">
+            <div class="card-header mb-4">
+                <h4 class="font-semibold text-gray-600">
+                    Card title
+                </h4>
+            </div>
+            <div class="card-body text-gray-600">Content place here</div>
+        </div>
+        HTML;
+
+        $this->assertComponentRenders(
+            $expected,
+            '<x-wt-card title="Card title" id="my-card">Content place here</x-wt-card>'
+        );
+    }
+
+    /** @test */
     public function the_component_with_custom_header()
     {
         $expected = <<<'HTML'
-        <div class="min-w-0 p-4 bg-white rounded-lg shadow-sm border border-gray-100">
+        <div class="min-w-0 p-4 rounded-lg shadow-sm border border-gray-100 bg-white">
             <div class="card-header mb-4"> <h1>Custom Header</h1> </div>
             <div class="card-body text-gray-600">
                 <div>Content place here</div>
@@ -81,7 +101,7 @@ class CardTest extends ComponentTestCase
     public function the_component_with_custom_footer()
     {
         $expected = <<<'HTML'
-        <div class="min-w-0 p-4 bg-white rounded-lg shadow-sm border border-gray-100">
+        <div class="min-w-0 p-4 rounded-lg shadow-sm border border-gray-100 bg-white">
             <div class="card-header mb-4">
                 <h4 class="font-semibold text-gray-600">
                     Card title
@@ -110,7 +130,7 @@ class CardTest extends ComponentTestCase
     {
         // Primary
         $expected = <<<'HTML'
-        <div class="min-w-0 p-4 bg-purple-600 rounded-lg shadow-sm border border-gray-100">
+        <div class="min-w-0 p-4 rounded-lg shadow-sm border border-gray-100 bg-purple-600">
             <div class="card-header mb-4">
                 <h4 class="font-semibold text-white">
                     Card title
@@ -131,7 +151,7 @@ class CardTest extends ComponentTestCase
 
         // Success
         $expected = <<<'HTML'
-        <div class="min-w-0 p-4 bg-green-600 rounded-lg shadow-sm border border-gray-100">
+        <div class="min-w-0 p-4 rounded-lg shadow-sm border border-gray-100 bg-green-600">
             <div class="card-header mb-4">
                 <h4 class="font-semibold text-white">
                     Card title
@@ -152,7 +172,7 @@ class CardTest extends ComponentTestCase
 
         // Danger
         $expected = <<<'HTML'
-        <div class="min-w-0 p-4 bg-red-600 rounded-lg shadow-sm border border-gray-100">
+        <div class="min-w-0 p-4 rounded-lg shadow-sm border border-gray-100 bg-red-600">
             <div class="card-header mb-4">
                 <h4 class="font-semibold text-white">
                     Card title
@@ -173,7 +193,7 @@ class CardTest extends ComponentTestCase
 
         // Neutral
         $expected = <<<'HTML'
-        <div class="min-w-0 p-4 bg-gray-600 rounded-lg shadow-sm border border-gray-100">
+        <div class="min-w-0 p-4 rounded-lg shadow-sm border border-gray-100 bg-gray-600">
             <div class="card-header mb-4">
                 <h4 class="font-semibold text-white">
                     Card title
