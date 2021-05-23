@@ -40,7 +40,7 @@ class CardTest extends ComponentTestCase
         $expected = <<<'HTML'
         <div class="min-w-0 p-4 rounded-lg shadow-sm border border-gray-100 bg-white">
             <div class="card-header mb-4">
-                <h4 class="font-semibold text-gray-600">
+                <h4 class="font-semibold text-lg text-gray-600">
                     Card title
                 </h4>
             </div>
@@ -60,7 +60,7 @@ class CardTest extends ComponentTestCase
         $expected = <<<'HTML'
         <div class="min-w-0 p-4 rounded-lg shadow-sm border border-gray-100 bg-white" id="my-card">
             <div class="card-header mb-4">
-                <h4 class="font-semibold text-gray-600">
+                <h4 class="font-semibold text-lg text-gray-600">
                     Card title
                 </h4>
             </div>
@@ -103,7 +103,7 @@ class CardTest extends ComponentTestCase
         $expected = <<<'HTML'
         <div class="min-w-0 p-4 rounded-lg shadow-sm border border-gray-100 bg-white">
             <div class="card-header mb-4">
-                <h4 class="font-semibold text-gray-600">
+                <h4 class="font-semibold text-lg text-gray-600">
                     Card title
                 </h4>
             </div>
@@ -132,7 +132,7 @@ class CardTest extends ComponentTestCase
         $expected = <<<'HTML'
         <div class="min-w-0 p-4 rounded-lg shadow-sm border border-gray-100 bg-purple-600">
             <div class="card-header mb-4">
-                <h4 class="font-semibold text-white">
+                <h4 class="font-semibold text-lg text-white">
                     Card title
                 </h4>
             </div>
@@ -153,7 +153,7 @@ class CardTest extends ComponentTestCase
         $expected = <<<'HTML'
         <div class="min-w-0 p-4 rounded-lg shadow-sm border border-gray-100 bg-green-600">
             <div class="card-header mb-4">
-                <h4 class="font-semibold text-white">
+                <h4 class="font-semibold text-lg text-white">
                     Card title
                 </h4>
             </div>
@@ -174,7 +174,7 @@ class CardTest extends ComponentTestCase
         $expected = <<<'HTML'
         <div class="min-w-0 p-4 rounded-lg shadow-sm border border-gray-100 bg-red-600">
             <div class="card-header mb-4">
-                <h4 class="font-semibold text-white">
+                <h4 class="font-semibold text-lg text-white">
                     Card title
                 </h4>
             </div>
@@ -195,7 +195,7 @@ class CardTest extends ComponentTestCase
         $expected = <<<'HTML'
         <div class="min-w-0 p-4 rounded-lg shadow-sm border border-gray-100 bg-gray-600">
             <div class="card-header mb-4">
-                <h4 class="font-semibold text-white">
+                <h4 class="font-semibold text-lg text-white">
                     Card title
                 </h4>
             </div>

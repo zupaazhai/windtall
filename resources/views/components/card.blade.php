@@ -7,7 +7,7 @@
     @if (!empty($title) || !empty($header))
     <div class="card-header mb-4">
         @if (empty($header))
-        <h4 class="font-semibold {{ $getColorVariennt() }}">{{ $title }}</h4>
+        <h4 class="font-semibold text-lg {{ $getColorVariennt() }}">{{ $title }}</h4>
         @else {{ $header }} @endif
     </div>
     @endif
