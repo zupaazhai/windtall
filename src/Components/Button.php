@@ -3,11 +3,12 @@
 namespace Zupaazhai\Windtall\Components;
 
 use Illuminate\View\View;
+use Zupaazhai\Windtall\Traits\Style;
 use Zupaazhai\Windtall\Traits\Varient;
 
 class Button extends WindtallComponent
 {
-    use Varient;
+    use Varient, Style;
 
     public $tag;
 

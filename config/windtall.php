@@ -13,6 +13,10 @@ return [
         'card' => Components\Card::class
     ],
 
+    'styles' => [
+        'border_rounded' => 'md'
+    ],
+
     'varients' => [
         'primary' => [
             'color' => 'purple'
