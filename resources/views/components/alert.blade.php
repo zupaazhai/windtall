@@ -3,6 +3,4 @@
     $class = implode(' ', [$defaultClass, $getVarient()]);
 @endphp
 
-<div {{ $attributes->merge(['class' => $class]) }}>
-    {{ $slot ?? '' }}
-</div>
+<div {{ $attributes->merge(['class' => $class]) }}>{{ $slot ?? '' }}</div>

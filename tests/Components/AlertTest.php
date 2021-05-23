@@ -45,9 +45,7 @@ class AlertTest extends ComponentTestCase
     public function it_can_be_slotted()
     {
         $expected = <<<'HTML'
-        <div class="p-4 relative rounded-lg leading-5 bg-purple-50 text-purple-900">
-            This is aler message
-        </div>
+        <div class="p-4 relative rounded-lg leading-5 bg-purple-50 text-purple-900">This is aler message</div>
         HTML;
 
         $this->assertComponentRenders($expected, '<x-wt-alert>This is aler message</x-wt-alert>');
