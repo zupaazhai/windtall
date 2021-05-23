@@ -8,7 +8,8 @@ use Zupaazhai\Windtall\Traits\Varient;
 
 class Button extends WindtallComponent
 {
-    use Varient, Style;
+    use Varient;
+    use Style;
 
     public $tag;
 
